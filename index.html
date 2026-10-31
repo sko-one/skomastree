@@ -174,18 +174,10 @@ legend{font-size:14px;color:var(--muted);padding:0;margin-bottom:10px}
 .err{color:var(--tbd);margin:0}
 .hidden{display:none}
 
-/* Payment */
-.paygrid{display:grid;grid-template-columns:auto 1fr;gap:clamp(24px,4vw,48px);align-items:start;margin-top:24px}
-@media (max-width:560px){.paygrid{grid-template-columns:1fr}}
-#qr{background:#fff;padding:12px;width:max-content;line-height:0}
-#qr svg{width:200px;height:200px;display:block}
 .bank{display:grid;grid-template-columns:auto 1fr;margin:0;font-size:17px;border-top:1px solid var(--line)}
 .bank dt,.bank dd{margin:0;padding:10px 0;border-bottom:1px solid var(--line)}
 .bank dt{color:var(--muted);padding-right:24px}
-.bank dd{overflow-wrap:anywhere;font-weight:500;display:flex;align-items:center;justify-content:space-between;gap:12px}
-.copy-btn{flex:none;font:inherit;font-size:13px;font-weight:500;color:var(--ink);background:none;border:1px solid var(--line);border-radius:999px;padding:5px 12px;cursor:pointer;transition:background-color .2s ease,color .2s ease,border-color .2s ease}
-.copy-btn:hover{border-color:var(--ink)}
-.copy-btn.done{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.bank dd{overflow-wrap:anywhere;font-weight:500}
 
 /* Footer (като sko.one) */
 .site-footer{position:relative;overflow:hidden;border-top:1px solid var(--line);margin-top:clamp(64px,10vw,128px);padding:clamp(40px,6vw,72px) var(--pad) clamp(32px,4vw,48px)}
@@ -295,11 +287,11 @@ legend{font-size:14px;color:var(--muted);padding:0;margin-bottom:10px}
   </section>
 
   <section class="block" id="poruchka" aria-labelledby="h-order">
-    <h2 id="h-order">Поръчка</h2>
+    <h2 id="h-order">Заявка</h2>
     <div class="body">
       <div id="order-wrap">
-        <p class="lead">Попълни формата и веднага ще видиш QR код за банков превод. Изпращаме до офис на Еконт или Спиди, или можеш да я вземеш от студиото ни в София. Пратката тръгва, след като преводът пристигне.</p>
-        <p class="hint">При Еконт и Спиди доставката е за сметка на получателя и се плаща на куриера при получаване. Вземането от студиото е безплатно.</p>
+        <p class="lead">Изпращането на заявката е поръчка с посочените данни. До 3 работни дни ще ти отговорим по имейл с потвърждение и данни за плащане с банков превод, включително QR код. Пратката тръгва, след като преводът пристигне.</p>
+        <p class="hint">Изпращаме до офис на Еконт или Спиди, като доставката е за сметка на получателя и се плаща на куриера при получаване. Можеш да вземеш елхата и от студиото ни в София, без допълнително заплащане.</p>
 
         <form id="order" name="skomastree-poruchka" method="POST" data-netlify="true" netlify-honeypot="bot-field">
           <input type="hidden" name="form-name" value="skomastree-poruchka">
@@ -332,26 +324,21 @@ legend{font-size:14px;color:var(--muted);padding:0;margin-bottom:10px}
           <p id="pickup-info" class="hint hidden" style="margin:0">Студио SKO, бул. „Цар Борис III“ 171, София. Ще ти се обадим, когато поръчката е готова, за да уговорим ден и час.</p>
           <label class="f">Бележка<textarea name="belezhka" rows="2"></textarea></label>
 
-          <label class="check"><input type="checkbox" name="gdpr" value="да" required>
-            <span>Съгласен/на съм данните ми да се използват за изпълнение на поръчката, според <a href="#" class="tbd">политиката за поверителност</a>.</span></label>
+          <label class="check"><input type="checkbox" name="usloviya" value="да" required>
+            <span>Прочетох и приемам <a href="obshti-usloviya.html" target="_blank">общите условия</a> и <a href="poveritelnost.html" target="_blank">политиката за поверителност</a>.</span></label>
 
           <p class="err hidden" id="err" role="alert"></p>
-          <div><button class="visit solid" type="submit" id="submit">Изпрати поръчката</button></div>
+          <div><button class="visit solid" type="submit" id="submit">Изпрати заявката</button></div>
         </form>
       </div>
 
       <div id="pay" class="hidden" tabindex="-1">
-        <p class="lead">Поръчката е изпратена. Сканирай кода с банковото си приложение или копирай данните с бутоните. Ще ти пишем, щом преводът пристигне и пратката тръгне.</p>
-        <div class="paygrid">
-          <div id="qr" aria-label="QR код за банков превод"></div>
-          <dl class="bank">
-            <dt>Получател</dt><dd><span id="b-name"></span><button type="button" class="copy-btn" data-copy="name">Копирай</button></dd>
-            <dt>IBAN</dt><dd><span id="b-iban"></span><button type="button" class="copy-btn" data-copy="iban">Копирай</button></dd>
-            <dt>Сума</dt><dd><span id="b-sum"></span><button type="button" class="copy-btn" data-copy="sum">Копирай</button></dd>
-            <dt>Основание</dt><dd><span id="b-ref"></span><button type="button" class="copy-btn" data-copy="ref">Копирай</button></dd>
-          </dl>
-        </div>
-        <p class="hint" style="margin-top:20px">Не всички банкови приложения разпознават кода. Тогава копирай данните и ги постави в нов превод. Основанието е важно, по него свързваме превода с поръчката.</p>
+        <p class="lead">Заявката е изпратена. Благодарим!</p>
+        <dl class="bank">
+          <dt>Номер на заявката</dt><dd id="b-ref"></dd>
+          <dt>Сума</dt><dd id="b-sum"></dd>
+        </dl>
+        <p class="hint" style="margin-top:20px">До 3 работни дни ще ти пишем на <strong id="b-email"></strong> с потвърждение и данни за плащане. Ако не получиш имейл, провери папката за спам или ни пиши на <a href="mailto:info@sko.one">info@sko.one</a>.</p>
       </div>
     </div>
   </section>
@@ -364,8 +351,8 @@ legend{font-size:14px;color:var(--muted);padding:0;margin-bottom:10px}
     <div><h3>Контакти</h3><ul>
       <li><a href="mailto:info@sko.one">info@sko.one</a></li>
       <li><a href="tel:+359887146879">+359 88 7146 879</a></li>
-      <li><a href="#" class="tbd">Общи условия</a></li>
-      <li><a href="#" class="tbd">Поверителност</a></li>
+      <li><a href="obshti-usloviya.html">Общи условия</a></li>
+      <li><a href="poveritelnost.html">Поверителност</a></li>
     </ul></div>
     <div><h3>Последвайте ни</h3><ul>
       <li><a href="https://www.facebook.com/profile.php?id=61570025671797" target="_blank" rel="noopener">Facebook</a></li>
@@ -376,17 +363,10 @@ legend{font-size:14px;color:var(--muted);padding:0;margin-bottom:10px}
   <p class="copy">© 2024 SKO</p>
 </footer>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcode-generator/1.4.4/qrcode.min.js"></script>
 <script>
-/* ===== НАСТРОЙКИ: попълни тези стойности ===== */
-const CONFIG = {
-  priceEUR: 100,                     // цена за брой
-  payeeName: "Саня Ковачева",        // показва се на екрана
-  qrName: "Sanya Kovacheva",         // в QR кода: латиница, защото Булбанк Мобайл не чете кирилица в него
-  iban: "BG85UNCR70001598305564",
-  bic: "UNCRBGSF"                    // УниКредит Булбанк
-};
-/* ============================================= */
+/* ===== НАСТРОЙКИ ===== */
+const CONFIG = { priceEUR: 100 };   // цена за брой
+/* ===================== */
 
 const $ = id => document.getElementById(id);
 const fmt = n => n.toFixed(2).replace(".", ",");
@@ -431,9 +411,11 @@ updateTotal();
 
 
 function makeRef(){
-  const d = new Date(), code = Math.random().toString(36).slice(2, 6).toUpperCase();
-  return `SMT-${String(d.getMonth()+1).padStart(2,"0")}${String(d.getDate()).padStart(2,"0")}-${code}`;
+  /* 4 знака без лесно бъркащи се символи (0/O, 1/I/L) */
+  const A = "23456789ABCDEFGHJKMNPQRSTUVWXYZ", r = crypto.getRandomValues(new Uint32Array(4));
+  return Array.from(r, n => A[n % A.length]).join("");
 }
+const REF_PREFIX = "Order SKOmas ";
 /* Delivery: courier office fields, or pickup from the studio */
 document.querySelectorAll('input[name="kurier"]').forEach(r => r.addEventListener("change", () => {
   const pickup = r.value === "Вземане от SKO";
@@ -442,35 +424,11 @@ document.querySelectorAll('input[name="kurier"]').forEach(r => r.addEventListene
   $("courier-fields").querySelectorAll("input").forEach(i => { i.required = !pickup; if (pickup) i.value = ""; });
 }));
 
-/* Copy buttons for people whose bank app doesn't read the QR */
-const COPY = {};
-async function copyText(t){
-  try { await navigator.clipboard.writeText(t); return true; }
-  catch(_) {
-    const ta = document.createElement("textarea"); ta.value = t; ta.setAttribute("readonly", "");
-    ta.style.position = "fixed"; ta.style.opacity = "0"; document.body.appendChild(ta); ta.select();
-    let ok = false; try { ok = document.execCommand("copy"); } catch(e){}
-    ta.remove(); return ok;
-  }
-}
-document.querySelectorAll(".copy-btn").forEach(btn => btn.addEventListener("click", async () => {
-  const ok = await copyText(COPY[btn.dataset.copy] || "");
-  btn.textContent = ok ? "Копирано" : "Не успя";
-  btn.classList.toggle("done", ok);
-  setTimeout(() => { btn.textContent = "Копирай"; btn.classList.remove("done"); }, 1800);
-}));
-
-/* EPC QR (SEPA превод), версия 001 с BIC: тази версия разпознава Булбанк Мобайл */
-function epcPayload(amount, ref){
-  return ["BCD","001","1","SCT", CONFIG.bic, CONFIG.qrName, CONFIG.iban.replace(/\s/g,""),
-          "EUR" + amount.toFixed(2), "", "", "Poruchka " + ref].join("\n");
-}
-
 $("order").addEventListener("submit", async e => {
   e.preventDefault();
   const form = e.target, btn = $("submit"), err = $("err");
   const total = updateTotal(), ref = makeRef();
-  $("ref").value = ref; $("sum").value = total.toFixed(2);
+  $("ref").value = REF_PREFIX + ref; $("sum").value = total.toFixed(2);
   btn.disabled = true; btn.textContent = "Изпращане…"; err.classList.add("hidden");
   try {
     const res = await fetch("/", { method: "POST",
@@ -478,23 +436,15 @@ $("order").addEventListener("submit", async e => {
       body: new URLSearchParams(new FormData(form)).toString() });
     if (!res.ok) throw new Error(res.status);
     $("order-wrap").classList.add("hidden");
-    $("b-name").textContent = CONFIG.payeeName;
-    $("b-iban").textContent = CONFIG.iban.replace(/(.{4})/g, "$1 ").trim();
+    $("b-ref").textContent = REF_PREFIX + ref;
     $("b-sum").textContent = fmt(total) + " €";
-    $("b-ref").textContent = "Poruchka " + ref;
-    COPY.name = CONFIG.payeeName;
-    COPY.iban = CONFIG.iban.replace(/\s/g, "");
-    COPY.sum  = Number.isInteger(total) ? String(total) : total.toFixed(2);
-    COPY.ref  = "Poruchka " + ref;
-    qrcode.stringToBytes = qrcode.stringToBytesFuncs["UTF-8"];   // UTF-8 без BOM, за да чете кирилицата правилно
-    const qr = qrcode(0, "M"); qr.addData(epcPayload(total, ref), "Byte"); qr.make();
-    $("qr").innerHTML = qr.createSvgTag({ cellSize: 4, margin: 0 });
+    $("b-email").textContent = form.email.value;
     $("pay").classList.remove("hidden");
     $("pay").focus();
   } catch (_) {
-    err.textContent = "Поръчката не беше изпратена. Провери връзката и опитай пак, или пиши на info@sko.one.";
+    err.textContent = "Заявката не беше изпратена. Провери връзката и опитай пак, или пиши на info@sko.one.";
     err.classList.remove("hidden");
-    btn.disabled = false; btn.textContent = "Изпрати поръчката";
+    btn.disabled = false; btn.textContent = "Изпрати заявката";
   }
 });
 
