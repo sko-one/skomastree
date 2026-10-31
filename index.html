@@ -1,0 +1,554 @@
+<!doctype html>
+<html lang="bg">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>SKOmas Tree – прозрачно коледно дърво | SKO Sanya Ko Operations</title>
+<meta name="description" content="SKOmas Tree е коледно дърво от прозрачни панели от плексиглас, проектирано от студио SKO на архитект Саня Ковачева. Доставка до офис на Еконт или Спиди, или вземане от студио SKO в София.">
+<link rel="canonical" href="https://skomastree.sko.one/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="bg_BG">
+<meta property="og:site_name" content="Sanya Ko Operations">
+<meta property="og:title" content="SKOmas Tree | SKO">
+<meta property="og:description" content="Коледно дърво от прозрачни панели от плексиглас, проектирано от студио SKO.">
+<meta property="og:image" content="https://skomastree.sko.one/images/8.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="https://sko.one/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sofia+Sans:wght@300..800&family=Sofia+Sans+Extra+Condensed:wght@500..800&family=Dosis:wght@500..700&display=swap" rel="stylesheet">
+<script>
+  try { const t = localStorage.getItem("sko-theme"); if (t) document.documentElement.dataset.theme = t; } catch(e){}
+</script>
+<style>
+:root{
+  --paper:#ffffff; --ink:#000000; --muted:#7c7c7c; --line:#e2e2e2;
+  --concrete:#e9e7e3; --concrete-line:#d8d5cf; --pattern:#cfcfcf; --tbd:#c0661c;
+  --font:"Sofia Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+  --display:"Sofia Sans Extra Condensed","Sofia Sans","Arial Narrow",sans-serif;
+  /* Само името на продукта: Dosis (няма кирилица) */
+  --product:"Dosis","Sofia Sans",Arial,sans-serif;
+  --pad:clamp(20px,4vw,56px);
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+  color-scheme:light;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#121212; --ink:#f2f2f2; --muted:#9a9a9a; --line:#2c2c2c;
+    --concrete:#1d1d1c; --concrete-line:#2b2a28; --pattern:#3a3a3a; --tbd:#e39a5c; color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#121212; --ink:#f2f2f2; --muted:#9a9a9a; --line:#2c2c2c;
+  --concrete:#1d1d1c; --concrete-line:#2b2a28; --pattern:#3a3a3a; --tbd:#e39a5c; color-scheme:dark;
+}
+html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 90px)}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--font);font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased;transition:background-color .25s ease,color .25s ease}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--paper)}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+:focus-visible{outline:2px solid var(--ink);outline-offset:3px}
+
+/* Header (като sko.one) */
+.site-header{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;background:var(--paper);border-bottom:1px solid var(--line);transition:background-color .25s ease}
+.bar{display:flex;align-items:center;gap:24px;padding:16px var(--pad)}
+.brand{display:flex;align-items:center;gap:14px;margin-right:auto}
+.brand-mark{display:block;line-height:0}
+.brand-mark svg{width:52px;height:52px;display:block}
+.brand-name{font-size:14px;color:var(--muted)}
+.nav{display:flex;gap:28px;font-size:15px}
+.nav a{position:relative;padding:4px 0}
+.nav a:hover{color:var(--muted)}
+.tools{display:flex;align-items:center;gap:6px;padding-left:20px;border-left:1px solid var(--line)}
+.tool{display:inline-grid;place-items:center;min-width:36px;height:36px;padding:0 8px;background:none;border:1px solid transparent;border-radius:999px;color:var(--ink);font:inherit;font-size:14px;font-weight:600;cursor:pointer}
+.tool:hover{border-color:var(--line)}
+.tool svg{width:18px;height:18px}
+.menu-btn{display:none;background:none;border:0;color:var(--ink);font:inherit;font-size:15px;cursor:pointer;padding:6px 0}
+@media (max-width:379px){.brand-name{display:none}}
+@media (max-width:860px){
+  .brand{gap:10px}
+  .menu-btn{display:block}
+  .tools{border-left:0;padding-left:0;gap:2px}
+  .nav{display:none;position:absolute;left:0;right:0;top:100%;flex-direction:column;gap:0;background:var(--paper);border-bottom:1px solid var(--line);padding:8px var(--pad) 16px}
+  .nav.open{display:flex}
+  .nav a{padding:12px 0;font-size:20px}
+}
+
+main{padding:0 var(--pad)}
+
+/* Product head: same grid as a project page on sko.one */
+.project{padding:clamp(32px,6vw,72px) 0 0}
+.project-head{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px 48px;align-items:end;margin-bottom:clamp(24px,4vw,40px)}
+@media (max-width:760px){.project-head{grid-template-columns:1fr}}
+.product-title{margin:0;font-family:var(--product);font-weight:600;font-size:clamp(56px,10vw,150px);line-height:.88;letter-spacing:-.02em}
+.subtitle{margin:clamp(12px,1.6vw,20px) 0 0;font-size:clamp(20px,2vw,26px);line-height:1.25;color:var(--muted)}
+.head-side{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:16px 32px}
+.facts{display:grid;grid-template-columns:auto 1fr;gap:6px 24px;font-size:15px;margin:0}
+.facts dt{color:var(--muted)}
+.facts dd{margin:0}
+.visit{display:inline-flex;align-items:center;gap:10px;padding:10px 18px;border:1px solid var(--ink);border-radius:999px;background:none;color:var(--ink);font:inherit;font-size:15px;font-weight:500;line-height:1;white-space:nowrap;cursor:pointer;transition:background-color .2s ease,color .2s ease}
+.visit span{color:var(--muted);font-weight:400;transition:color .2s ease}
+.visit svg{width:13px;height:13px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;transition:transform .25s ease}
+.visit:hover{background:var(--ink);color:var(--paper)}
+.visit:hover span{color:var(--paper);opacity:.7}
+.visit:hover svg{transform:translateY(2px)}
+.visit.solid{background:var(--ink);color:var(--paper)}
+.visit.solid:hover{background:none;color:var(--ink)}
+.visit:disabled{opacity:.5;cursor:default}
+
+/* Image + text, like the asymmetric rhythm on sko.one */
+.intro-grid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));column-gap:clamp(12px,2vw,28px);row-gap:clamp(28px,5vw,64px);align-items:start}
+.intro-grid{margin-top:clamp(40px,7vw,104px)}
+.intro-grid .prose{grid-column:1/4}
+.intro-grid .specs{grid-column:4/7;margin:0}
+.prose{max-width:62ch;font-size:18px;line-height:1.65}
+.prose p{margin:0 0 1em}
+.prose p:last-child{margin-bottom:0}
+.prose a{text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px}
+.specs{display:grid;grid-template-columns:auto 1fr;margin:clamp(28px,4vw,48px) 0 0;font-size:15px;border-top:1px solid var(--line)}
+.specs dt,.specs dd{margin:0;padding:10px 0;border-bottom:1px solid var(--line)}
+.specs dt{color:var(--muted);padding-right:32px}
+.tbd{color:var(--tbd);border-bottom:1px dashed currentColor}
+@media (max-width:760px){
+  .intro-grid{grid-template-columns:1fr}
+  .intro-grid .prose,.intro-grid .specs{grid-column:1/-1}
+}
+
+/* Film strip, same as sko.one project pages */
+.strip-wrap{margin:0 calc(var(--pad) * -1)}
+.strip{display:flex;gap:clamp(12px,1.6vw,24px);overflow-x:auto;scroll-snap-type:x mandatory;padding:0 var(--pad);scroll-padding:0 var(--pad);scrollbar-width:none;cursor:grab;overscroll-behavior-x:contain}
+.strip::-webkit-scrollbar{display:none}
+.strip.dragging{cursor:grabbing;scroll-snap-type:none}
+.strip figure{flex:none;margin:0;scroll-snap-align:start;height:clamp(280px,70vh,760px);aspect-ratio:4/5;background:var(--concrete)}
+.strip figure:last-child{margin-right:var(--pad)}
+.strip img{height:100%;width:100%;object-fit:cover;max-width:none;user-select:none;-webkit-user-drag:none;pointer-events:none}
+.strip-bar{display:flex;align-items:center;gap:16px;padding:18px var(--pad) 0;font-size:14px;color:var(--muted)}
+.strip-bar button{background:none;border:0;padding:6px;color:var(--ink);cursor:pointer;line-height:0}
+.strip-bar button:disabled{color:var(--line);cursor:default}
+.strip-bar svg{width:44px;height:16px;overflow:visible}
+.strip-bar svg path{stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;fill:none}
+.strip-count{font-variant-numeric:tabular-nums;margin-left:auto}
+@media (max-width:700px){.strip figure{height:auto;width:86vw}}
+
+/* Sections */
+.block{border-top:1px solid var(--line);margin-top:clamp(56px,8vw,112px);padding:clamp(32px,5vw,56px) 0 0;display:grid;grid-template-columns:repeat(6,minmax(0,1fr));column-gap:clamp(12px,2vw,28px);row-gap:24px}
+.block > h2{grid-column:1/3;margin:0;font-family:var(--display);font-weight:700;font-size:clamp(40px,5vw,72px);line-height:.86;letter-spacing:-.02em;padding-right:16px;overflow-wrap:anywhere}
+.block > .body{grid-column:3/7}
+@media (max-width:860px){.block{grid-template-columns:1fr}.block > h2,.block > .body{grid-column:1/-1}}
+
+ol.steps{list-style:none;counter-reset:s;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(20px,3vw,40px)}
+ol.steps li{counter-increment:s}
+ol.steps li::before{content:counter(s);display:block;font-family:var(--display);font-weight:700;font-size:clamp(48px,5vw,72px);line-height:.9;margin-bottom:12px}
+ol.steps strong{display:block;font-size:19px;font-weight:600;margin-bottom:4px}
+ol.steps p{margin:0;color:var(--muted)}
+@media (max-width:640px){ol.steps{grid-template-columns:1fr}}
+
+/* Form */
+.lead{font-size:clamp(18px,1.7vw,22px);line-height:1.55;margin:0 0 8px;max-width:52ch}
+.hint{font-size:15px;color:var(--muted);margin:0 0 clamp(24px,4vw,40px)}
+form{display:grid;gap:18px;max-width:640px}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+@media (max-width:560px){.row{grid-template-columns:1fr}}
+label.f{display:grid;gap:6px;font-size:14px;color:var(--muted)}
+input[type=text],input[type=email],input[type=tel],input[type=number],textarea{
+  font:inherit;font-size:17px;color:var(--ink);background:transparent;border:0;border-bottom:1px solid var(--line);
+  border-radius:0;padding:8px 0;width:100%}
+input:focus,textarea:focus{outline:none;border-bottom-color:var(--ink)}
+textarea{resize:vertical}
+fieldset{border:0;padding:0;margin:0}
+legend{font-size:14px;color:var(--muted);padding:0;margin-bottom:10px}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chips label{cursor:pointer}
+.chips input{position:absolute;opacity:0;pointer-events:none}
+.chips span{display:inline-block;font-size:15px;color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:8px 16px}
+.chips label:hover span{color:var(--ink);border-color:var(--ink)}
+.chips input:checked + span{color:var(--paper);background:var(--ink);border-color:var(--ink)}
+.chips input:focus-visible + span{outline:2px solid var(--ink);outline-offset:3px}
+.check{display:flex;gap:10px;align-items:flex-start;font-size:15px;color:var(--muted);cursor:pointer}
+.check input{accent-color:var(--ink);margin-top:4px}
+.check a{text-decoration:underline;text-underline-offset:3px}
+.total{font-family:var(--display);font-weight:700;font-size:clamp(32px,3.6vw,48px);line-height:1;margin:0;align-self:end}
+.err{color:var(--tbd);margin:0}
+.hidden{display:none}
+
+/* Payment */
+.paygrid{display:grid;grid-template-columns:auto 1fr;gap:clamp(24px,4vw,48px);align-items:start;margin-top:24px}
+@media (max-width:560px){.paygrid{grid-template-columns:1fr}}
+#qr{background:#fff;padding:12px;width:max-content;line-height:0}
+#qr svg{width:200px;height:200px;display:block}
+.bank{display:grid;grid-template-columns:auto 1fr;margin:0;font-size:17px;border-top:1px solid var(--line)}
+.bank dt,.bank dd{margin:0;padding:10px 0;border-bottom:1px solid var(--line)}
+.bank dt{color:var(--muted);padding-right:24px}
+.bank dd{overflow-wrap:anywhere;font-weight:500}
+
+/* Footer (като sko.one) */
+.site-footer{position:relative;overflow:hidden;border-top:1px solid var(--line);margin-top:clamp(64px,10vw,128px);padding:clamp(40px,6vw,72px) var(--pad) clamp(32px,4vw,48px)}
+.foot-pattern{position:absolute;inset:0;width:100%;height:100%;color:var(--pattern);pointer-events:none}
+.foot-cols,.copy{position:relative}
+.foot-cols{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:32px;font-size:15px}
+@media (max-width:760px){.foot-cols{grid-template-columns:1fr 1fr}}
+.foot-cols h3{font-size:13px;font-weight:500;color:var(--muted);margin:0 0 10px}
+.foot-cols p,.foot-cols ul{margin:0;padding:0;list-style:none}
+.foot-cols li{margin-bottom:4px}
+.foot-cols a:hover{color:var(--muted)}
+.copy{margin-top:32px;font-size:13px;color:var(--muted)}
+
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="bar">
+    <a class="brand" href="https://sko.one/" aria-label="Sanya Ko Operations, начало">
+      <span class="brand-mark"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 635 635"><path d="M4.2 23.8l19.6-19.6M44.7 23.8l19.6-19.6M85.1 23.8l19.6-19.6M125.6 23.8l19.6-19.6M166.1 23.8l19.6-19.6M206.5 23.8l19.6-19.6M247.0 23.8l19.6-19.6M287.5 23.8l19.6-19.6M328.0 23.8l19.6-19.6M368.4 23.8l19.6-19.6M408.9 23.8l19.6-19.6M449.4 23.8l19.6-19.6M489.8 23.8l19.6-19.6M530.3 23.8l19.6-19.6M570.8 23.8l19.6-19.6M611.2 23.8l19.6-19.6M4.2 64.3l19.6-19.6M44.7 64.3l19.6-19.6M85.1 64.3l19.6-19.6M125.6 64.3l19.6-19.6M166.1 64.3l19.6-19.6M206.5 64.3l19.6-19.6M247.0 64.3l19.6-19.6M287.5 64.3l19.6-19.6M328.0 64.3l19.6-19.6M368.4 64.3l19.6-19.6M408.9 64.3l19.6-19.6M449.4 64.3l19.6-19.6M489.8 64.3l19.6-19.6M530.3 64.3l19.6-19.6M570.8 64.3l19.6-19.6M611.2 64.3l19.6-19.6M4.2 104.7l19.6-19.6M44.7 104.7l19.6-19.6M85.1 104.7l19.6-19.6M125.6 104.7l19.6-19.6M166.1 104.7l19.6-19.6M206.5 104.7l19.6-19.6M247.0 104.7l19.6-19.6M287.5 104.7l19.6-19.6M328.0 104.7l19.6-19.6M368.4 104.7l19.6-19.6M408.9 104.7l19.6-19.6M449.4 104.7l19.6-19.6M489.8 104.7l19.6-19.6M530.3 104.7l19.6-19.6M570.8 104.7l19.6-19.6M611.2 104.7l19.6-19.6M4.2 145.2l19.6-19.6M44.7 145.2l19.6-19.6M85.1 145.2l19.6-19.6M125.6 145.2l19.6-19.6M166.1 145.2l19.6-19.6M206.5 145.2l19.6-19.6M247.0 145.2l19.6-19.6M287.5 145.2l19.6-19.6M328.0 145.2l19.6-19.6M368.4 145.2l19.6-19.6M408.9 145.2l19.6-19.6M449.4 145.2l19.6-19.6M489.8 145.2l19.6-19.6M530.3 145.2l19.6-19.6M570.8 145.2l19.6-19.6M611.2 145.2l19.6-19.6M4.2 185.7l19.6-19.6M44.7 185.7l19.6-19.6M85.1 185.7l19.6-19.6M125.6 185.7l19.6-19.6M166.1 185.7l19.6-19.6M206.5 185.7l19.6-19.6M247.0 185.7l19.6-19.6M287.5 185.7l19.6-19.6M328.0 185.7l19.6-19.6M368.4 185.7l19.6-19.6M408.9 185.7l19.6-19.6M449.4 185.7l19.6-19.6M489.8 185.7l19.6-19.6M530.3 185.7l19.6-19.6M570.8 185.7l19.6-19.6M611.2 185.7l19.6-19.6M4.2 226.2l19.6-19.6M44.7 226.2l19.6-19.6M85.1 226.2l19.6-19.6M125.6 226.2l19.6-19.6M166.1 226.2l19.6-19.6M206.5 226.2l19.6-19.6M247.0 226.2l19.6-19.6M287.5 226.2l19.6-19.6M328.0 226.2l19.6-19.6M368.4 226.2l19.6-19.6M408.9 226.2l19.6-19.6M449.4 226.2l19.6-19.6M489.8 226.2l19.6-19.6M530.3 226.2l19.6-19.6M570.8 226.2l19.6-19.6M611.2 226.2l19.6-19.6M4.2 266.6l19.6-19.6M44.7 266.6l19.6-19.6M85.1 266.6l19.6-19.6M125.6 266.6l19.6-19.6M166.1 266.6l19.6-19.6M206.5 266.6l19.6-19.6M247.0 266.6l19.6-19.6M287.5 266.6l19.6-19.6M328.0 266.6l19.6-19.6M368.4 266.6l19.6-19.6M408.9 266.6l19.6-19.6M449.4 266.6l19.6-19.6M489.8 266.6l19.6-19.6M530.3 266.6l19.6-19.6M570.8 266.6l19.6-19.6M611.2 266.6l19.6-19.6M4.2 307.1l19.6-19.6M44.7 307.1l19.6-19.6M85.1 307.1l19.6-19.6M125.6 307.1l19.6-19.6M166.1 307.1l19.6-19.6M206.5 307.1l19.6-19.6M247.0 307.1l19.6-19.6M287.5 307.1l19.6-19.6M328.0 307.1l19.6-19.6M368.4 307.1l19.6-19.6M408.9 307.1l19.6-19.6M449.4 307.1l19.6-19.6M489.8 307.1l19.6-19.6M530.3 307.1l19.6-19.6M570.8 307.1l19.6-19.6M611.2 307.1l19.6-19.6M4.2 347.6l19.6-19.6M44.7 347.6l19.6-19.6M85.1 347.6l19.6-19.6M125.6 347.6l19.6-19.6M166.1 347.6l19.6-19.6M206.5 347.6l19.6-19.6M247.0 347.6l19.6-19.6M287.5 347.6l19.6-19.6M328.0 347.6l19.6-19.6M368.4 347.6l19.6-19.6M408.9 347.6l19.6-19.6M449.4 347.6l19.6-19.6M489.8 347.6l19.6-19.6M530.3 347.6l19.6-19.6M570.8 347.6l19.6-19.6M611.2 347.6l19.6-19.6M4.2 388.0l19.6-19.6M44.7 388.0l19.6-19.6M85.1 388.0l19.6-19.6M125.6 388.0l19.6-19.6M166.1 388.0l19.6-19.6M206.5 388.0l19.6-19.6M247.0 388.0l19.6-19.6M287.5 388.0l19.6-19.6M328.0 388.0l19.6-19.6M368.4 388.0l19.6-19.6M408.9 388.0l19.6-19.6M449.4 388.0l19.6-19.6M489.8 388.0l19.6-19.6M530.3 388.0l19.6-19.6M570.8 388.0l19.6-19.6M611.2 388.0l19.6-19.6M4.2 428.5l19.6-19.6M44.7 428.5l19.6-19.6M85.1 428.5l19.6-19.6M125.6 428.5l19.6-19.6M166.1 428.5l19.6-19.6M206.5 428.5l19.6-19.6M247.0 428.5l19.6-19.6M287.5 428.5l19.6-19.6M328.0 428.5l19.6-19.6M368.4 428.5l19.6-19.6M408.9 428.5l19.6-19.6M449.4 428.5l19.6-19.6M489.8 428.5l19.6-19.6M530.3 428.5l19.6-19.6M570.8 428.5l19.6-19.6M611.2 428.5l19.6-19.6M4.2 469.0l19.6-19.6M44.7 469.0l19.6-19.6M328.0 469.0l19.6-19.6M368.4 469.0l19.6-19.6M408.9 469.0l19.6-19.6M449.4 469.0l19.6-19.6M489.8 469.0l19.6-19.6M530.3 469.0l19.6-19.6M570.8 469.0l19.6-19.6M611.2 469.0l19.6-19.6M4.2 509.4l19.6-19.6M44.7 509.4l19.6-19.6M328.0 509.4l19.6-19.6M368.4 509.4l19.6-19.6M408.9 509.4l19.6-19.6M449.4 509.4l19.6-19.6M489.8 509.4l19.6-19.6M530.3 509.4l19.6-19.6M570.8 509.4l19.6-19.6M611.2 509.4l19.6-19.6M4.2 549.9l19.6-19.6M44.7 549.9l19.6-19.6M328.0 549.9l19.6-19.6M368.4 549.9l19.6-19.6M408.9 549.9l19.6-19.6M449.4 549.9l19.6-19.6M489.8 549.9l19.6-19.6M530.3 549.9l19.6-19.6M570.8 549.9l19.6-19.6M611.2 549.9l19.6-19.6M4.2 590.4l19.6-19.6M44.7 590.4l19.6-19.6M85.1 590.4l19.6-19.6M125.6 590.4l19.6-19.6M166.1 590.4l19.6-19.6M206.5 590.4l19.6-19.6M247.0 590.4l19.6-19.6M287.5 590.4l19.6-19.6M328.0 590.4l19.6-19.6M368.4 590.4l19.6-19.6M408.9 590.4l19.6-19.6M449.4 590.4l19.6-19.6M489.8 590.4l19.6-19.6M530.3 590.4l19.6-19.6M570.8 590.4l19.6-19.6M611.2 590.4l19.6-19.6M4.2 630.8l19.6-19.6M44.7 630.8l19.6-19.6M85.1 630.8l19.6-19.6M125.6 630.8l19.6-19.6M166.1 630.8l19.6-19.6M206.5 630.8l19.6-19.6M247.0 630.8l19.6-19.6M287.5 630.8l19.6-19.6M328.0 630.8l19.6-19.6M368.4 630.8l19.6-19.6M408.9 630.8l19.6-19.6M449.4 630.8l19.6-19.6M489.8 630.8l19.6-19.6M530.3 630.8l19.6-19.6M570.8 630.8l19.6-19.6M611.2 630.8l19.6-19.6" fill="none" stroke="currentColor" stroke-width="8.4" stroke-linecap="round"/><path d="M266.8 446.5 L259.2 448.5 L253.5 451.5 L251.0 453.5 L247.8 457.0 L245.0 461.2 L243.0 466.8 L241.8 475.5 L242.0 528.2 L243.0 533.5 L246.2 541.0 L248.0 543.5 L251.8 547.2 L254.5 549.2 L261.2 552.2 L268.2 553.8 L278.0 554.0 L284.0 553.2 L292.2 550.5 L298.0 546.8 L301.8 542.8 L303.8 539.8 L305.8 535.0 L306.8 531.2 L307.5 525.2 L307.5 474.8 L306.8 469.0 L304.8 462.5 L302.5 458.5 L297.0 452.5 L294.0 450.5 L290.2 448.8 L282.0 446.5ZM271.5 460.0 L279.5 460.2 L282.5 461.2 L286.0 463.2 L290.0 468.0 L291.0 470.5 L292.0 476.0 L292.0 524.2 L291.0 529.5 L288.8 534.0 L286.0 536.8 L281.5 539.2 L277.0 540.2 L271.8 540.2 L268.0 539.5 L265.5 538.5 L263.0 536.8 L260.8 534.5 L258.8 531.5 L257.2 525.0 L257.2 475.2 L257.8 471.8 L259.8 467.0 L263.5 463.0 L266.5 461.2ZM166.8 447.8 L165.2 450.2 L165.2 548.8 L166.0 550.5 L167.5 551.8 L169.8 552.8 L173.8 553.2 L178.0 552.2 L180.8 549.8 L180.8 517.8 L188.8 507.5 L190.5 506.0 L214.0 541.0 L220.2 551.0 L222.2 552.8 L224.5 553.5 L228.8 553.2 L231.2 552.0 L233.5 550.0 L234.8 547.8 L234.8 544.8 L233.8 542.5 L201.0 493.0 L201.5 491.2 L228.8 457.5 L229.8 455.8 L230.0 454.2 L229.8 452.2 L228.8 450.2 L227.0 448.5 L223.8 446.5 L219.5 446.2 L217.8 447.0 L215.2 449.8 L181.2 494.8 L180.8 494.2 L180.8 449.2 L179.2 447.5 L175.5 446.2 L169.2 446.5ZM117.0 445.8 L110.5 446.8 L104.5 448.5 L98.2 451.8 L92.8 457.0 L90.0 461.2 L88.0 468.2 L87.8 476.2 L88.2 480.8 L89.0 483.8 L91.0 488.0 L93.5 491.5 L96.5 494.5 L105.5 500.2 L120.2 506.2 L124.5 508.5 L128.8 511.2 L132.0 514.5 L135.0 520.2 L135.2 527.2 L134.0 531.8 L132.2 534.2 L128.5 537.5 L124.0 539.5 L119.8 540.2 L114.0 540.2 L109.2 539.5 L107.5 538.5 L106.5 538.5 L101.5 535.5 L95.0 529.5 L93.2 528.8 L90.5 528.8 L88.8 529.8 L86.0 533.0 L85.2 535.0 L85.2 538.8 L87.5 543.0 L90.8 546.2 L93.5 548.2 L99.5 551.2 L104.8 553.0 L110.2 554.0 L122.0 554.2 L128.5 553.2 L134.2 551.2 L140.0 548.0 L144.8 543.5 L146.8 540.8 L149.8 533.8 L150.8 528.5 L150.5 516.0 L149.8 512.5 L147.2 506.8 L144.8 503.0 L141.0 499.2 L136.2 495.8 L132.2 493.5 L131.5 493.5 L130.2 492.5 L129.5 492.5 L128.2 491.5 L125.0 490.5 L123.5 489.5 L122.5 489.5 L117.5 487.5 L111.0 484.2 L108.8 482.8 L105.0 479.0 L103.8 476.2 L103.2 473.5 L103.8 468.2 L104.8 466.0 L107.8 462.8 L111.8 460.5 L116.5 459.2 L124.5 459.0 L128.8 459.5 L136.0 462.2 L139.2 464.2 L144.2 464.2 L146.5 462.0 L147.8 459.5 L148.2 455.0 L146.8 452.2 L143.0 449.5 L137.5 447.5 L126.5 445.8Z" fill="currentColor" fill-rule="evenodd"/></svg></span>
+      <span class="brand-name">Sanya Ko Operations</span>
+    </a>
+    <nav class="nav" id="nav" aria-label="Основно меню">
+      <a href="https://sko.one/about">За SKO</a>
+      <a href="https://sko.one/architecture">Архитектура</a>
+      <a href="https://sko.one/design">Дизайн</a>
+      <a href="https://sko.one/contacts">Контакти</a>
+    </nav>
+    <div class="tools">
+      <button class="tool" id="themeBtn" type="button"></button>
+      <button class="menu-btn" id="menuBtn" type="button" aria-expanded="false" aria-controls="nav">Меню</button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <article class="project">
+    <div class="project-head">
+      <div>
+        <h1 class="product-title">SKOmas Tree</h1>
+        <p class="subtitle">Коледна елха с индустриална естетика от прозрачен плексиглас</p>
+      </div>
+      <div class="head-side">
+        <dl class="facts">
+          <dt>Категория</dt><dd>Продуктов дизайн</dd>
+          <dt>Материал</dt><dd>Акрилно стъкло (PMMA)</dd>
+          <dt>Цена</dt><dd><span id="price-head">—</span> €</dd>
+        </dl>
+        <a class="visit solid" href="#poruchka">Поръчай<svg viewBox="0 0 14 14" aria-hidden="true"><path d="M7 2V12M2.5 7.5L7 12L11.5 7.5"/></svg></a>
+      </div>
+    </div>
+
+    <div class="strip-wrap">
+      <div class="strip" id="strip" tabindex="0" aria-label="Снимки на SKOmas Tree">
+        <figure><img src="images/1.jpg" alt="SKOmas Tree и стъклена играчка краставичка" width="1080" height="1350" draggable="false"></figure>
+        <figure><img src="images/2.jpg" alt="Ръце подреждат прозрачните панели от плексиглас" width="1080" height="1350" draggable="false"></figure>
+        <figure><img src="images/4.jpg" alt="Закрепване на панелите с кабелна връзка" width="1080" height="1350" draggable="false"></figure>
+        <figure><img src="images/5.jpg" alt="Кабелна връзка, която държи върха на дървото" width="1080" height="1350" draggable="false" loading="lazy"></figure>
+        <figure><img src="images/7.jpg" alt="Отрязване на излишния край на връзката с клещи" width="1080" height="1350" draggable="false" loading="lazy"></figure>
+        <figure><img src="images/8.jpg" alt="Сглобеното SKOmas Tree пред бетонна стена" width="1080" height="1350" draggable="false" loading="lazy"></figure>
+        <figure><img src="images/9.jpg" alt="Основата на дървото: краката на панелите" width="1080" height="1350" draggable="false" loading="lazy"></figure>
+        <figure><img src="images/11.jpg" alt="Окачване на играчка на дървото" width="1080" height="1350" draggable="false" loading="lazy"></figure>
+        <figure><img src="images/DSC01948.jpg" alt="Дървото с окачени играчки" width="1080" height="1350" draggable="false" loading="lazy"></figure>
+        <figure><img src="images/DSC01971.jpg" alt="Играчки, окачени по ръба на панелите" width="1080" height="1350" draggable="false" loading="lazy"></figure>
+        <figure><img src="images/DSC01973.jpg" alt="SKOmas Tree, осветено с LED гирлянд на тъмно" width="1080" height="1350" draggable="false" loading="lazy"></figure>
+        <figure><img src="images/DSC01990.jpg" alt="Светлините на гирлянда през плексигласа, отблизо" width="1080" height="1350" draggable="false" loading="lazy"></figure>
+        <figure><img src="images/DSC02025.jpg" alt="Кутията с панелите, книжката с инструкции и стикер SKO" width="1080" height="1350" draggable="false" loading="lazy"></figure>
+        <figure><img src="images/DSC02038.jpg" alt="Номерирана кутия, 1/48" width="1080" height="1350" draggable="false" loading="lazy"></figure>
+      </div>
+      <div class="strip-bar">
+        <button type="button" id="stripPrev" aria-label="Предишна снимка"><svg viewBox="0 0 44 16" aria-hidden="true"><path d="M43 8H1M1 8L8 1M1 8L8 15"/></svg></button>
+        <button type="button" id="stripNext" aria-label="Следваща снимка"><svg viewBox="0 0 44 16" aria-hidden="true"><path d="M1 8H43M43 8L36 1M43 8L36 15"/></svg></button>
+        <span class="strip-count" id="stripCount">1 / 14</span>
+      </div>
+    </div>
+
+    <div class="intro-grid">
+      <div class="prose">
+          <p>Панелите се захващат един в друг и се закрепват с кабелни връзки, така че сглобяването става част от празника. Сглобявате я и я украсявате заедно.</p>
+          <p>SKOmas Tree е проектирана в студио SKO като обект, а не като украса за една година. Панелите са изрязани с лазер от прозрачен плексиглас и се подреждат в обем, който се променя според това откъде го гледаш и как пада светлината.</p>
+          <p>Няма иглички за чистене и няма нищо за изхвърляне през януари. Разглобяваш я, прибираш панелите в кутията и я вадиш отново догодина.</p>
+      </div>
+      <dl class="specs">
+          <dt>Височина</dt><dd>50 см</dd>
+          <dt>Ширина в основата</dt><dd>около 37 см</dd>
+          <dt>Панели</dt><dd>48 бр.</dd>
+          <dt>Кабелни връзки</dt><dd>24 бр.</dd>
+          <dt>Материал</dt><dd>Акрилно стъкло (PMMA)</dd>
+          <dt>Дебелина</dt><dd>3 мм</dd>
+          <dt>Тегло</dt><dd>около 2 кг</dd>
+          <dt>Опаковка</dt><dd>Кутия 61 × 11,5 × 7,5 см</dd>
+      </dl>
+    </div>
+  </article>
+
+  <section class="block" aria-labelledby="h-steps">
+    <h2 id="h-steps">Сглобяване</h2>
+    <div class="body">
+      <ol class="steps">
+        <li><strong>Подреди панелите</strong><p>Извади панелите от кутията и ги нареди в обема по схемата от книжката.</p></li>
+        <li><strong>Закрепи с връзки</strong><p>Прекарай кабелните връзки през отворите, затегни ги и отрежи излишните краища с клещи.</p></li>
+        <li><strong>Украси я</strong><p>Закачи играчки по връзките или увий LED гирлянд: плексигласът пречупва светлината във всеки панел.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="block" id="poruchka" aria-labelledby="h-order">
+    <h2 id="h-order">Поръчка</h2>
+    <div class="body">
+      <div id="order-wrap">
+        <p class="lead">Попълни формата и веднага ще видиш QR код за банков превод. Изпращаме до офис на Еконт или Спиди, или можеш да я вземеш от студиото ни в София. Пратката тръгва, след като преводът пристигне.</p>
+        <p class="hint">При Еконт и Спиди доставката е за сметка на получателя и се плаща на куриера при получаване. Вземането от студиото е безплатно.</p>
+
+        <form id="order" name="skomastree-poruchka" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+          <input type="hidden" name="form-name" value="skomastree-poruchka">
+          <input type="hidden" name="poruchka_nomer" id="ref">
+          <input type="hidden" name="suma_eur" id="sum">
+          <p class="hidden"><label>Не попълвай: <input name="bot-field"></label></p>
+
+          <div class="row">
+            <label class="f">Брой<input type="number" name="broi" id="qty" min="1" max="20" value="1" required></label>
+            <p class="total"><span id="total">—</span> €</p>
+          </div>
+          <div class="row">
+            <label class="f">Име и фамилия<input type="text" name="ime" autocomplete="name" required></label>
+            <label class="f">Телефон<input type="tel" name="telefon" autocomplete="tel" required></label>
+          </div>
+          <label class="f">Имейл<input type="email" name="email" autocomplete="email" required></label>
+
+          <fieldset>
+            <legend>Доставка</legend>
+            <div class="chips">
+              <label><input type="radio" name="kurier" value="Еконт" required><span>Офис на Еконт</span></label>
+              <label><input type="radio" name="kurier" value="Спиди"><span>Офис на Спиди</span></label>
+              <label><input type="radio" name="kurier" value="Вземане от SKO"><span>Вземане от студио SKO</span></label>
+            </div>
+          </fieldset>
+          <div class="row" id="courier-fields">
+            <label class="f">Град<input type="text" name="grad" autocomplete="address-level2" required></label>
+            <label class="f">Офис<input type="text" name="ofis" placeholder="Име или адрес" required></label>
+          </div>
+          <p id="pickup-info" class="hint hidden" style="margin:0">Студио SKO, бул. „Цар Борис III“ 171, София. Ще ти се обадим, когато поръчката е готова, за да уговорим ден и час.</p>
+          <label class="f">Бележка<textarea name="belezhka" rows="2"></textarea></label>
+
+          <label class="check"><input type="checkbox" name="gdpr" value="да" required>
+            <span>Съгласен/на съм данните ми да се използват за изпълнение на поръчката, според <a href="#" class="tbd">политиката за поверителност</a>.</span></label>
+
+          <p class="err hidden" id="err" role="alert"></p>
+          <div><button class="visit solid" type="submit" id="submit">Изпрати поръчката</button></div>
+        </form>
+      </div>
+
+      <div id="pay" class="hidden" tabindex="-1">
+        <p class="lead">Поръчката е изпратена. Сканирай кода с банковото си приложение или въведи данните ръчно. Ще ти пишем, щом преводът пристигне и пратката тръгне.</p>
+        <div class="paygrid">
+          <div id="qr" aria-label="QR код за банков превод"></div>
+          <dl class="bank">
+            <dt>Получател</dt><dd id="b-name"></dd>
+            <dt>IBAN</dt><dd id="b-iban"></dd>
+            <dt>Сума</dt><dd id="b-sum"></dd>
+            <dt>Основание</dt><dd id="b-ref"></dd>
+          </dl>
+        </div>
+        <p class="hint" style="margin-top:20px">Ако приложението ти не разпознае кода, използвай данните. Основанието е важно, по него свързваме превода с поръчката.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <svg class="foot-pattern" id="footPattern" aria-hidden="true"></svg>
+  <div class="foot-cols">
+    <div><h3>Локация</h3><p>София, бул. „Цар Борис III“ 171<br>Варна<br>България</p></div>
+    <div><h3>Контакти</h3><ul>
+      <li><a href="mailto:info@sko.one">info@sko.one</a></li>
+      <li><a href="tel:+359887146879">+359 88 7146 879</a></li>
+      <li><a href="#" class="tbd">Общи условия</a></li>
+      <li><a href="#" class="tbd">Поверителност</a></li>
+    </ul></div>
+    <div><h3>Последвайте ни</h3><ul>
+      <li><a href="https://www.facebook.com/profile.php?id=61570025671797" target="_blank" rel="noopener">Facebook</a></li>
+      <li><a href="https://www.instagram.com/sko.oone/" target="_blank" rel="noopener">Instagram</a></li>
+      <li><a href="https://www.linkedin.com/in/sanyakovacheva" target="_blank" rel="noopener">LinkedIn</a></li>
+    </ul></div>
+  </div>
+  <p class="copy">© 2024 SKO</p>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcode-generator/1.4.4/qrcode.min.js"></script>
+<script>
+/* ===== НАСТРОЙКИ: попълни тези стойности ===== */
+const CONFIG = {
+  priceEUR: 100,                     // цена за брой
+  payeeName: "Саня Ковачева",        // точно както е титулярят на сметката (банката на платеца го сверява)
+  iban: "BG85UNCR70001598305564",
+  bic: "UNCRBGSF"                    // УниКредит Булбанк
+};
+/* ============================================= */
+
+const $ = id => document.getElementById(id);
+const fmt = n => n.toFixed(2).replace(".", ",");
+
+/* Theme toggle, same as sko.one */
+const SUN = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.5 1.5M17.2 17.2l1.5 1.5M5.3 18.7l1.5-1.5M17.2 6.8l1.5-1.5"/></svg>';
+const MOON = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z"/></svg>';
+const darkQuery = matchMedia("(prefers-color-scheme: dark)");
+const isDark = () => { const t = document.documentElement.dataset.theme; return t ? t === "dark" : darkQuery.matches; };
+function themeButton(){
+  const d = isDark();
+  $("themeBtn").innerHTML = d ? SUN : MOON;
+  $("themeBtn").setAttribute("aria-label", d ? "Включи светъл режим" : "Включи тъмен режим");
+  $("themeBtn").title = $("themeBtn").getAttribute("aria-label");
+}
+$("themeBtn").addEventListener("click", () => {
+  const next = isDark() ? "light" : "dark";
+  document.documentElement.dataset.theme = next;
+  try { localStorage.setItem("sko-theme", next); } catch(e){}
+  themeButton();
+});
+darkQuery.addEventListener?.("change", themeButton);
+themeButton();
+
+/* Mobile menu */
+$("menuBtn").addEventListener("click", () => {
+  const open = $("nav").classList.toggle("open");
+  $("menuBtn").setAttribute("aria-expanded", open);
+  $("menuBtn").textContent = open ? "Затвори" : "Меню";
+});
+
+/* Price and total */
+$("price-head").textContent = CONFIG.priceEUR ? fmt(CONFIG.priceEUR) : "—";
+function updateTotal(){
+  const q = Math.max(1, parseInt($("qty").value || "1", 10));
+  const t = q * CONFIG.priceEUR;
+  $("total").textContent = CONFIG.priceEUR ? fmt(t) : "—";
+  return t;
+}
+$("qty").addEventListener("input", updateTotal);
+updateTotal();
+
+
+function makeRef(){
+  const d = new Date(), code = Math.random().toString(36).slice(2, 6).toUpperCase();
+  return `SMT-${String(d.getMonth()+1).padStart(2,"0")}${String(d.getDate()).padStart(2,"0")}-${code}`;
+}
+/* Delivery: courier office fields, or pickup from the studio */
+document.querySelectorAll('input[name="kurier"]').forEach(r => r.addEventListener("change", () => {
+  const pickup = r.value === "Вземане от SKO";
+  $("courier-fields").classList.toggle("hidden", pickup);
+  $("pickup-info").classList.toggle("hidden", !pickup);
+  $("courier-fields").querySelectorAll("input").forEach(i => { i.required = !pickup; if (pickup) i.value = ""; });
+}));
+
+/* EPC QR (SEPA превод), версия 002 */
+function epcPayload(amount, ref){
+  return ["BCD","002","1","SCT", CONFIG.bic, CONFIG.payeeName, CONFIG.iban.replace(/\s/g,""),
+          "EUR" + amount.toFixed(2), "", "", "Poruchka " + ref].join("\n");
+}
+
+$("order").addEventListener("submit", async e => {
+  e.preventDefault();
+  const form = e.target, btn = $("submit"), err = $("err");
+  const total = updateTotal(), ref = makeRef();
+  $("ref").value = ref; $("sum").value = total.toFixed(2);
+  btn.disabled = true; btn.textContent = "Изпращане…"; err.classList.add("hidden");
+  try {
+    const res = await fetch("/", { method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams(new FormData(form)).toString() });
+    if (!res.ok) throw new Error(res.status);
+    $("order-wrap").classList.add("hidden");
+    $("b-name").textContent = CONFIG.payeeName;
+    $("b-iban").textContent = CONFIG.iban.replace(/(.{4})/g, "$1 ").trim();
+    $("b-sum").textContent = fmt(total) + " €";
+    $("b-ref").textContent = "Poruchka " + ref;
+    qrcode.stringToBytes = qrcode.stringToBytesFuncs["UTF-8"];   // UTF-8 без BOM, за да чете кирилицата правилно
+    const qr = qrcode(0, "M"); qr.addData(epcPayload(total, ref), "Byte"); qr.make();
+    $("qr").innerHTML = qr.createSvgTag({ cellSize: 4, margin: 0 });
+    $("pay").classList.remove("hidden");
+    $("pay").focus();
+  } catch (_) {
+    err.textContent = "Поръчката не беше изпратена. Провери връзката и опитай пак, или пиши на info@sko.one.";
+    err.classList.remove("hidden");
+    btn.disabled = false; btn.textContent = "Изпрати поръчката";
+  }
+});
+
+/* Film strip, same as sko.one */
+(function(){
+  const strip = $("strip"); if (!strip) return;
+  const figs = [...strip.children], prevB = $("stripPrev"), nextB = $("stripNext"), count = $("stripCount");
+  const padL = () => parseFloat(getComputedStyle(strip).paddingLeft);
+  const pos = f => f.offsetLeft - strip.offsetLeft - padL();
+  const current = () => {
+    if (strip.scrollLeft + strip.clientWidth >= strip.scrollWidth - 4) return figs.length - 1;
+    let best = 0;
+    figs.forEach((f, k) => { if (Math.abs(pos(f) - strip.scrollLeft) < Math.abs(pos(figs[best]) - strip.scrollLeft)) best = k; });
+    return best;
+  };
+  const go = i => strip.scrollTo({ left: pos(figs[Math.max(0, Math.min(figs.length - 1, i))]), behavior: "smooth" });
+  const update = () => {
+    count.textContent = `${current() + 1} / ${figs.length}`;
+    prevB.disabled = strip.scrollLeft <= 2;
+    nextB.disabled = strip.scrollLeft + strip.clientWidth >= strip.scrollWidth - 2;
+  };
+  prevB.addEventListener("click", () => go(current() - 1));
+  nextB.addEventListener("click", () => go(current() + 1));
+  strip.addEventListener("scroll", update, { passive: true });
+  strip.addEventListener("keydown", e => {
+    if (e.key === "ArrowRight") { e.preventDefault(); go(current() + 1); }
+    if (e.key === "ArrowLeft")  { e.preventDefault(); go(current() - 1); }
+  });
+  let down = false, startX = 0, startLeft = 0;
+  strip.addEventListener("pointerdown", e => { if (e.pointerType !== "mouse") return; down = true; startX = e.clientX; startLeft = strip.scrollLeft; strip.classList.add("dragging"); strip.setPointerCapture(e.pointerId); });
+  strip.addEventListener("pointermove", e => { if (down) strip.scrollLeft = startLeft - (e.clientX - startX); });
+  const end = () => { if (!down) return; down = false; strip.classList.remove("dragging"); go(current()); };
+  strip.addEventListener("pointerup", end); strip.addEventListener("pointercancel", end);
+  addEventListener("resize", update);
+  update();
+})();
+
+/* Footer pattern, same as sko.one: the logo's dash grid with whole dashes left out around the text */
+function drawFooterPattern(){
+  const foot = document.querySelector(".site-footer"), svg = $("footPattern");
+  if (!foot || !svg) return;
+  const blocks = [...foot.querySelectorAll(".foot-cols > div, .copy")];
+  blocks.forEach(el => el.style.transform = "");
+  const W = foot.clientWidth, H = foot.clientHeight;
+  const P = W < 600 ? 9.6 : 11.2, k = P / 40.47, d = 19.6 * k, sw = 8.4 * k, o = 4.2 * k;
+  const fr = foot.getBoundingClientRect(), gap = P * 0.9;
+  const ox = (W - (Math.floor((W - 2 * o) / P) * P + d)) / 2 - o, oy = (H - (Math.floor((H - 2 * o) / P) * P + d)) / 2 - o;
+  const cols = Math.ceil(W / P) + 1, rows = Math.ceil(H / P) + 1;
+  const dx = c => ox + c * P + o, dy = r => oy + r * P + o;
+  const span = (a, b, start) => [Math.ceil((a - d - start) / P), Math.floor((b - start) / P)];
+  const holes = blocks.map(el => {
+    let L = Infinity, T = Infinity, R = -Infinity, B = -Infinity;
+    const walk = document.createTreeWalker(el, NodeFilter.SHOW_TEXT);
+    for (let n = walk.nextNode(); n; n = walk.nextNode()) {
+      if (!n.textContent.trim()) continue;
+      const range = document.createRange(); range.selectNodeContents(n);
+      for (const r of range.getClientRects()) {
+        L = Math.min(L, r.left - fr.left); T = Math.min(T, r.top - fr.top);
+        R = Math.max(R, r.right - fr.left); B = Math.max(B, r.bottom - fr.top);
+      }
+    }
+    if (L === Infinity) return [0, -1, 0, -1];
+    const [c0, c1] = span(L - gap, R + gap, ox + o), [r0, r1] = span(T - gap, B + gap, oy + o);
+    const fx0 = dx(c0 - 1) + d + sw / 2, fx1 = dx(c1 + 1) - sw / 2;
+    const fy0 = dy(r0 - 1) + d + sw / 2, fy1 = dy(r1 + 1) - sw / 2;
+    el.style.transform = `translate(${((fx0 + fx1) / 2 - (L + R) / 2).toFixed(1)}px, ${((fy0 + fy1) / 2 - (T + B) / 2).toFixed(1)}px)`;
+    return [c0, c1, r0, r1];
+  });
+  let path = "";
+  for (let r = 0; r < rows; r++) for (let c = 0; c < cols; c++) {
+    const x = dx(c), y = dy(r);
+    if (x < 0 || y < 0 || x + d > W || y + d > H) continue;
+    if (holes.some(h => c >= h[0] && c <= h[1] && r >= h[2] && r <= h[3])) continue;
+    path += `M${x.toFixed(1)} ${(y + d).toFixed(1)}l${d.toFixed(1)}-${d.toFixed(1)}`;
+  }
+  svg.setAttribute("viewBox", `0 0 ${W} ${H}`);
+  svg.innerHTML = `<path d="${path}" fill="none" stroke="currentColor" stroke-width="${sw.toFixed(2)}" stroke-linecap="round"/>`;
+}
+if (window.ResizeObserver) new ResizeObserver(drawFooterPattern).observe(document.querySelector(".site-footer"));
+document.fonts && document.fonts.ready.then(drawFooterPattern);
+</script>
+</body>
+</html>
